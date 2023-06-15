@@ -11,7 +11,7 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(cors());
-app.options('*',cors());
+app.options('https://webscrape-ecommerce-frontend.netlify.app/',cors());
 var allowCrossDomain = function(req,res,next) {
   res.header('Access-Control-Allow-Origin', 'https://webscrape-ecommerce-frontend.netlify.app/');
   res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE');
