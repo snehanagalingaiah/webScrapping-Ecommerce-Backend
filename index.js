@@ -21,7 +21,7 @@ var allowCrossDomain = function(req,res,next) {
 app.use(allowCrossDomain);
 
  mongo.connectdb();
- cron.schedule('0 */1 * * * *', () => {
+ cron.schedule('0 0 */12 * * *', () => {
   console.log('running a task every minute');
    scraper.scrape();
 });
