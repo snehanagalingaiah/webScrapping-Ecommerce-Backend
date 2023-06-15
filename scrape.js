@@ -71,7 +71,7 @@ module.exports.scrape = async () => {
   console.log("SCRAPED DATA LENGTH", products.length)
   if(products){
   	   console.log("going to delete prev data now");
-  	   const res = await axios.delete(`http://localhost:8000/products/delete`);
+  	   const res = await axios.delete(`${process.env.BACKEND}/products/delete`);
   	   console.log("previous data deleted moving on to data load...",res)
       try
        {
