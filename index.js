@@ -22,7 +22,7 @@ app.use(allowCrossDomain);
 
  mongo.connectdb();
  cron.schedule('0 0 */12 * * *', () => {
-  console.log('running a task every minute');
+  console.log('running load task every 12 hour');
    scraper.scrape();
 });
 
